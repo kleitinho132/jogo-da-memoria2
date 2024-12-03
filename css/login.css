@@ -1,0 +1,58 @@
+@import url("reset.css");
+
+.login-form{
+    background: url('../images/demon\ slayer.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+.login__header{
+    display: grid;
+    place-items: center;
+}
+
+.login__header h1{
+    color: #fff;
+    font-size: #ccc;
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    text-shadow: 2px 2px #8d573f, 3px 3px #fff;
+}
+
+.login__input{
+    border: 2px solid #8d573f;
+    width: 100%;
+    max-width: 300px;
+    padding: .8rem;
+    outline-color: #c06036;
+    font-size: 1.2rem;
+    color: firebrick;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.login__button{
+    width: 100%;
+    max-width: 300px;
+    padding: .8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #D20038;
+    color: #fff;
+}
+
+.login__button:disabled{
+    background: #aaa;
+    cursor: auto;
+}

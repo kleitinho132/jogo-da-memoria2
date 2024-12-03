@@ -1,0 +1,97 @@
+@import url('reset.css');
+
+body{
+     background: url('../images/fundo3.png') center no-repeat; 
+    background-size: cover;
+
+}
+
+main{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+header{
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 3px 3px #234D49, 5px 5px #000;
+    width: calc(100% - 10%);
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid{
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: .5rem;
+}
+
+.card{
+    background-color:#fff;
+    aspect-ratio: 3/4;
+    width:7rem;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 500ms ease;
+}
+
+/* 
+.card:active{
+    transform: rotatey(180deg);
+} */
+
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 4px #234D49;
+    border-radius: 8px;
+    background-size: 100% 100% !important;
+    transition: all 1s ease;
+}
+
+.front{
+    /* background: url('../images/1.png') center; */
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.back{
+    background: url(../images/costa.png) center;
+    backface-visibility: hidden;
+}
+
+/* classes que serão add com javascrip */
+
+.reveal-card{
+    transform: rotateY(180deg);
+}
+
+.disabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+    header{
+        font-size: 1rem;
+    }
+
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card{
+        width: 4rem;
+        aspect-ratio: 3/5;
+    }
+}
